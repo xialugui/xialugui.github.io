@@ -4,11 +4,11 @@ layout: home
 
 hero:
   name: "xialugui"
-  text: "All Thing About XiaLugui"
+  text: "All Thing About Xia Lugui"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 简介
       link: /markdown-examples
     - theme: alt
       text: API Examples

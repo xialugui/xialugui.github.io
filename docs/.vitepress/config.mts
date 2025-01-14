@@ -10,19 +10,31 @@ export default defineConfig({
         // siteTitle: false,
         nav: [
             {text: '主页', link: '/'},
-            {text: 'Examples', link: '/markdown-examples'}
+            {text: 'Examples', link: '/markdown-examples'},
+            {text: '关于我', link: '/about-me'}
         ],
 
-        sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'}
+        // sidebar: [
+        //     {
+        //         text: 'Examples',
+        //         items: [
+        //             {text: 'Markdown Examples', link: '/markdown-examples'},
+        //             {text: 'Runtime API Examples', link: '/api-examples'}
+        //         ]
+        //     }, {
+        //         text: 'Examples1',
+        //         items: [
+        //             {text: 'Markdown Examples', link: '/markdown-examples'},
+        //         ]
+        //     },
+        // ],
+        sidebar: {
+            "/about-me": {
+                base: "", items: [
+                    {text: "ss", link: "sss"}
                 ]
             }
-        ],
-
+        },
         socialLinks: [
             {icon: 'github', link: 'https://github.com/xialugui'},
             {icon: 'gitee', link: 'https://gitee.com/xialugui'},

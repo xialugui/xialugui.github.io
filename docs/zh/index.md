@@ -4,14 +4,14 @@ layout: home
 
 hero:
   name: "xialugui"
-  text: "陆龟的博客"
-  tagline: 试试看
+  text: "陆龟的小站"
+  tagline: 这里记录了陆龟的琐碎事
   actions:
     - theme: brand
-      text: 简介
+      text: 关于我
       link: /about-me
     - theme: alt
-      text: 内容
+      text: 内容导航
       link: /content
 
 features:

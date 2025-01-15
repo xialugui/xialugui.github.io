@@ -17,7 +17,7 @@ export default {
 
         // 评论组件 - https://giscus.app/
         giscusTalk({
-                repo: 'https://github.com/xialugui/xialugui.github.io',
+                repo: 'xialugui/xialugui.github.io',
                 repoId: 'MDEwOlJlcG9zaXRvcnkzODE5MzgyOTM',
                 category: 'General', // 默认: `General`
                 categoryId: 'DIC_kwDOFsPqdc4CmBei',
@@ -28,13 +28,14 @@ export default {
                 // 配置为一个对象，里面为键值对组：
                 // [你的 i18n 配置名称]: [对应 Giscus 中的语言包名称]
                 locales: {
-                    'root': 'zh-CN',
+                    'zh-Hans': 'zh-CN',
                     'en-US': 'en'
                 },
                 homePageShowComment: false, // 首页是否显示评论区，默认为否
                 lightTheme: 'light', // 默认: `light`
                 darkTheme: 'transparent_dark', // 默认: `transparent_dark`
                 // ...
+                loading: "lazy"
             }, {
                 frontmatter, route
             },

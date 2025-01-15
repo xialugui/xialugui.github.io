@@ -3,13 +3,11 @@ import {defineConfig, type DefaultTheme} from 'vitepress'
 export const zh = defineConfig({
     lang: 'zh-Hans',
     description: '陆龟的博客',
-
-
     themeConfig: {
         nav: nav(),
 
         sidebar: {
-            '/deep-learning/': {base: '/zh/deep-learning/', items: sidebarGuide()},
+            '/deep-learning/': {base: '/deep-learning/', items: sidebarGuide()},
             // '/zh/reference/': {base: '/zh/reference/', items: sidebarReference()}
         },
 
@@ -50,17 +48,16 @@ function nav(): DefaultTheme.NavItem[] {
     return [
         {
             text: '深度学习',
-            link: '/zh/deep-learning/preface',
+            link: '/deep-learning/preface',
             activeMatch: '/deep-learning/',
         }, {
             text: '机器学习',
-            link: '/zh/machine-learning/preface',
+            link: '/machine-learning/preface',
             activeMatch: '/machine-learning/',
         },
         {
             text: '关于我',
-            link: '/zh/about-me',
-            activeMatch: '/about-me'
+            link: '/about-me',
         },
         {
             // text: pkg.version,

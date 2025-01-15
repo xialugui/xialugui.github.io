@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "xialugui"
   text: "陆龟的小站"
-  tagline: 这个小站记录了陆龟的琐碎事
+  tagline: 这里记录了陆龟的琐碎事
   actions:
     - theme: brand
       text: 关于我

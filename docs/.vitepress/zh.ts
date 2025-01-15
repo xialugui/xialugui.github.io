@@ -3,14 +3,11 @@ import {defineConfig, type DefaultTheme} from 'vitepress'
 export const zh = defineConfig({
     lang: 'zh-Hans',
     description: '陆龟的博客',
-
-
     themeConfig: {
         nav: nav(),
 
         sidebar: {
-            '/deep-learning/': {base: '/zh/deep-learning/', items: sidebarGuide()},
-            // '/zh/reference/': {base: '/zh/reference/', items: sidebarReference()}
+            '/deep-learning/': {base: '/deep-learning/', items: sidebarGuide()},
         },
 
         editLink: {
@@ -50,20 +47,18 @@ function nav(): DefaultTheme.NavItem[] {
     return [
         {
             text: '深度学习',
-            link: '/zh/deep-learning/preface',
+            link: '/deep-learning/preface',
             activeMatch: '/deep-learning/',
         }, {
             text: '机器学习',
-            link: '/zh/machine-learning/preface',
+            link: '/machine-learning/preface',
             activeMatch: '/machine-learning/',
         },
         {
             text: '关于我',
-            link: '/zh/about-me',
-            activeMatch: '/about-me'
+            link: '/about-me',
         },
         {
-            // text: pkg.version,
             items: [
                 {
                     text: '参与贡献',
@@ -93,23 +88,20 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
 
 
 export const search: DefaultTheme.LocalSearchOptions['locales'] = {
-    zh: {
+    root: {
         translations: {
             button: {
                 buttonText: '搜索文档',
                 buttonAriaLabel: '搜索文档'
             },
             modal: {
-                displayDetails: "",
                 noResultsText: '无法找到相关结果',
                 footer: {
                     selectText: '选择',
                     navigateText: '切换',
                     closeText: '关闭',
-                    // searchByText: '搜索提供者'
                 },
                 resetButtonTitle: '清除查询条件',
-                backButtonTitle: "111"
             }
         }
     }

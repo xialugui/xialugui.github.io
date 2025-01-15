@@ -19,10 +19,8 @@ export const shared = defineConfig({
         socialLinks: [
             {icon: 'github', link: 'https://github.com/xialugui'},
             {icon: 'gitee', link: 'https://gitee.com/xialugui'},
-            // { icon: 'wechat', link: 'https://gitee.com/xialugui' },
             {icon: 'x', link: 'https://x.com/xialugui'},
             {icon: 'zhihu', link: 'https://zhihu.com/xialugui'},
-            // { icon: 'weibo', link: 'https://weibo.com/xialugui' }
         ],
 
         search: {
@@ -33,7 +31,5 @@ export const shared = defineConfig({
                 }
             }
         },
-
-        // carbonAds: {code: 'CEBDT27Y', placement: 'vuejsorg'}
     },
 })

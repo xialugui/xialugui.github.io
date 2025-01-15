@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fontsource/jetbrains-mono':
+        specifier: ^5.1.2
+        version: 5.1.2
+      '@fontsource/lxgw-wenkai':
+        specifier: ^5.1.0
+        version: 5.1.0
     devDependencies:
       vitepress:
         specifier: ^1.5.0
@@ -263,6 +270,12 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/jetbrains-mono@5.1.2':
+    resolution: {integrity: sha512-muYZK6W3NTrKpKTjoF2dkrtMjXLlPZhniLiLjMmfegRibl2L6jUJh9gB6UcbcZs3zHdIYTmzMkXNbNoI2kXX3Q==}
+
+  '@fontsource/lxgw-wenkai@5.1.0':
+    resolution: {integrity: sha512-2p2pZGEOqKtxp+LdIxOTF3qPmHyA3NZJ52SrAFWDful+gjUZqGIsJbJZFaPKlcBsTXu7ZvQITq2L7l3/VUiqSA==}
 
   '@iconify-json/simple-icons@1.2.19':
     resolution: {integrity: sha512-5ntmhLBUEKiakX3quPPXft+WfXIVfDINzTm3djZzzewah9ACxsCVaxoa4QVxlW8PMoF8jndXOqyHYZGCxwxoZw==}
@@ -1001,6 +1014,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource/jetbrains-mono@5.1.2': {}
+
+  '@fontsource/lxgw-wenkai@5.1.0': {}
 
   '@iconify-json/simple-icons@1.2.19':
     dependencies:

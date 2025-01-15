@@ -11,8 +11,8 @@ hero:
       text: 简介
       link: /about-me
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 内容
+      link: /content
 
 features:
   - title: Feature A

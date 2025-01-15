@@ -1,0 +1,7 @@
+@import url("https://cdn.jsdelivr.net/gh/CMBill/lxgw-wenkai-web/style.css");
+@import "@fontsource/jetbrains-mono";
+
+:root {
+    --vp-font-family-base: "JetBrains Mono", "LXGW WenKai";
+    --vp-font-family-mono: "JetBrains Mono", "LXGW WenKai";
+}

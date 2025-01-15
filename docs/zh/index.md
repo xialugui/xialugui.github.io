@@ -4,15 +4,15 @@ layout: home
 
 hero:
   name: "xialugui"
-  text: "All Thing About Xia Lugui"
-  tagline: My great project tagline
+  text: "陆龟的博客"
+  tagline: 试试看
   actions:
     - theme: brand
       text: 简介
       link: /about-me
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 内容
+      link: /content
 
 features:
   - title: Feature A

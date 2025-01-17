@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "xialugui"
   text: "陆龟的小站"
+  image:
+    src: /favicon.svg
+    alt: 陆龟
   tagline: 这里记录了陆龟的琐碎事
   actions:
     - theme: brand

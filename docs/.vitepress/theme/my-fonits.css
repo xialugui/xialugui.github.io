@@ -4,4 +4,22 @@
 :root {
     --vp-font-family-base: "JetBrains Mono", "LXGW WenKai";
     --vp-font-family-mono: "JetBrains Mono", "LXGW WenKai";
+/*    !* 首页标题样式 *!
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(135deg, #F6CEEC 10%, #D939CD 100%);
+
+    !* 首页图标背景 *!
+    --vp-home-hero-image-background-image: linear-gradient(135deg, #F6CEEC 10%, #D939CD 100%);
+    --vp-home-hero-image-filter: blur(150px);
+
+    !* brand按钮 *!
+    --vp-button-brand-border: #F6CEEC;
+    --vp-button-brand-text: #F6CEEC;
+    --vp-button-brand-bg: #D939CD;
+
+    --vp-button-brand-hover-border: #F6CEEC;
+    --vp-button-brand-hover-text: #fff;
+    --vp-button-brand-hover-bg: #D939CD;
+
+    --vp-button-brand-active-border: #F6CEEC;*/
 }

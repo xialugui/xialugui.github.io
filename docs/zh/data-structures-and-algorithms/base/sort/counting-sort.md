@@ -42,7 +42,17 @@ public int[] countingSort(int[] elements) {
 3. 通过上面的步骤，我们只知道某个元素组中最早的元素的位置，该组内的其他元素的位置要根据其相对于最早元素位置做减法，即
    `result[--counts[elements[i]]] = elements[i]`；
 
+### 分析
 
++ 时间复杂度：`O(n+k)`；
++ 空间复杂度：`O(n+k)`；
+
++ 优：快，线性；
++ 劣：
+  + 额外空间`n+k`；
+  + 在`k>nlog(n)`的情况下比基于排序的算法性能弱；
+  + 非整数（小数和负数可以通过乘和加映射到正整数）不适合；
 
 ## 参考文献
+
 1. https://oi-wiki.org/basic/counting-sort/

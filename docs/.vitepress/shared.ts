@@ -9,7 +9,11 @@ export const shared = defineConfig({
     rewrites: {
         'zh/:rest*': ':rest*'
     },
-
+    markdown: {
+        image: {
+            lazyLoading: true
+        }
+    },
     lastUpdated: true,
     cleanUrls: true,
     metaChunk: true,

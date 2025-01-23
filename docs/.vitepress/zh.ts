@@ -1,14 +1,11 @@
 import {defineConfig, type DefaultTheme} from 'vitepress'
+import {generateSidebar} from "vitepress-sidebar";
 
 export const zh = defineConfig({
     lang: 'zh-Hans',
     description: '陆龟的博客',
     themeConfig: {
         nav: nav(),
-
-        sidebar: {
-            '/deep-learning/': {base: '/deep-learning/', items: sidebarGuide()},
-        },
 
         editLink: {
             pattern: 'https://github.com/xialugui/xialugui.github.io/edit/main/docs/:path',
@@ -49,11 +46,17 @@ function nav(): DefaultTheme.NavItem[] {
             text: '深度学习',
             link: '/deep-learning/preface',
             activeMatch: '/deep-learning/',
-        }, {
-            text: '机器学习',
-            link: '/machine-learning/preface',
-            activeMatch: '/machine-learning/',
         },
+        {
+            text: '数据结构与算法',
+            link: '/data-structures-and-algorithms/preface',
+            activeMatch: '/data-structures-and-algorithms/',
+        },
+        //{
+        //     text: '机器学习',
+        //     link: '/machine-learning/preface',
+        //     activeMatch: '/machine-learning/',
+        // },
         {
             text: '关于我',
             link: '/about-me',

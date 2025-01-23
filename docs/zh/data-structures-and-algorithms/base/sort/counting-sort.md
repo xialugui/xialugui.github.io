@@ -3,7 +3,7 @@
 ## 直觉
 
 计数排序是每个玩过斗地主的人都掌握的技巧，很多人拿上扑克就会。下面的动图生动地模拟了抓牌、理牌的过程，一切都发生地那么自然。
-![计数排序演示动画](counting-sort-animate.svg)^[https://oi-wiki.org/basic/counting-sort/]
+![计数排序演示动画](counting-sort-animate.svg)
 
 有三点需要指出：
 
@@ -29,6 +29,7 @@ public int[] countingSort(int[] elements) {
   for (int i = elements.length - 1; i >= 0; i--) {
     result[--counts[elements[i]]] = elements[i];
   }
+  return result;
 }
 
 ```
@@ -44,3 +45,4 @@ public int[] countingSort(int[] elements) {
 
 
 ## 参考文献
+1. https://oi-wiki.org/basic/counting-sort/

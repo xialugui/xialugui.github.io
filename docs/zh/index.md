@@ -17,12 +17,12 @@ hero:
       text: 内容导航
       link: /content
 
-#features:
-#  - title: Feature A
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#  - title: Feature B
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#  - title: Feature C
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - title: 🎈数据结构和算法
+    details: 数据结构和算法基础知识与Online Judge平台题解
+  - title: 📚深度学习
+    details: 深度学习知识点的直觉性理解
+  - title: 🩺BCI All in One
+    details: 关于脑机接口的一些事
 ---
 

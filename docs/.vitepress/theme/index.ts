@@ -7,8 +7,16 @@ import {toRefs} from "vue";
 
 export default {
     ...DefaultTheme,
-    enhanceApp(ctx) {
-        DefaultTheme.enhanceApp(ctx);
+    enhanceApp({app, router, siteData}) {
+        router.onBeforeRouteChange = (to) => {
+            console.log('路由将改变为: ', to);
+            // @ts-ignore
+            if (typeof _hmt !== 'undefined') {
+                // @ts-ignore
+                _hmt.push(['_trackPageview', to]);
+            }
+        }
+        // DefaultTheme.enhanceApp(ctx);
     },
     setup() {
         // 获取前言和路由

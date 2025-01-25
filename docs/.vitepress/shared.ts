@@ -5,6 +5,17 @@ export const shared = defineConfig({
     title: 'Xia Lugui',
     head: [
         ['link', {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'}],
+/*        ['script', {},
+            `
+            window._hmt = window._hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?3bea84a559cbf129e08dddc668cd2db1";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            `
+        ],*/
     ],
     rewrites: {
         'zh/:rest*': ':rest*'

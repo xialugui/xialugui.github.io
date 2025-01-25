@@ -5,7 +5,7 @@ export const shared = defineConfig({
     title: 'Xia Lugui',
     head: [
         ['link', {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'}],
-/*        ['script', {},
+        ['script', {},
             `
             window._hmt = window._hmt || [];
             (function() {
@@ -15,7 +15,7 @@ export const shared = defineConfig({
               s.parentNode.insertBefore(hm, s);
             })();
             `
-        ],*/
+        ],
     ],
     rewrites: {
         'zh/:rest*': ':rest*'

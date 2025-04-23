@@ -32,19 +32,19 @@ export class TypstHelper {
         $typst.setCompilerInitOptions({
             beforeBuild: [
                 preloadRemoteFonts([
-                    '/JetBrainsMono-Regular.ttf',
-                    '/JetBrainsMono-Bold.ttf',
-                    '/LXGWWenKaiMonoGBScreen.ttf',
+                    'fonts/JetBrainsMono-Regular.ttf',
+                    'fonts/JetBrainsMono-Bold.ttf',
+                    'fonts/LXGWWenKaiMonoGBScreen.ttf',
                 ]),
             ],
             getModule: () =>
-                'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+                'https://fastly.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
         });
 
         $typst.setRendererInitOptions({
             beforeBuild: [],
             getModule: () =>
-                'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+                'https://fastly.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
         });
 
     }

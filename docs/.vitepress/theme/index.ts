@@ -4,6 +4,10 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import {useData, useRoute} from 'vitepress';
 // @ts-ignore
 import {toRefs} from "vue";
+import {$typst} from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
+// @ts-ignore
+import Typst from './components/Typst.vue'
+import {preloadRemoteFonts} from "@myriaddreamin/typst.ts";
 
 export default {
     ...DefaultTheme,
@@ -17,6 +21,24 @@ export default {
             }
         }
         // DefaultTheme.enhanceApp(ctx);
+
+        $typst.setCompilerInitOptions({
+            beforeBuild: [
+                preloadRemoteFonts([
+                    'https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-normal.woff2',
+                    '/LXGWWenKaiMonoGBScreen.ttf',
+                ]),
+            ],
+            getModule: () =>
+                'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',
+        });
+
+        $typst.setRendererInitOptions({
+            beforeBuild: [],
+            getModule: () =>
+                'https://cdn.jsdelivr.net/npm/@myriaddreamin/typst-ts-renderer/pkg/typst_ts_renderer_bg.wasm',
+        });
+        app.component('Typst', Typst)
     },
     setup() {
         // 获取前言和路由

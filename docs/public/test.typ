@@ -1,4 +1,5 @@
-#set text(lang: "zh", font: ("JetBrains Mono", "LXGW WenKai Mono"), region: "cn")
+#import "/docs/public/book.typ":*
+#show: config.with(title: "Test", outline-depth: 1)
 
-= 111
-是是是
+= 内容
+待补充。

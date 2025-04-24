@@ -48,7 +48,7 @@ jobs:
       - name: Build with VitePress
         run: pnpm docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
-        if: always()
+        continue-on-error: true
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist

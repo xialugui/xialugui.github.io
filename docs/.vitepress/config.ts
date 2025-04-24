@@ -1,13 +1,13 @@
-import {defineConfig} from 'vitepress'
-import {shared} from './shared'
-import {zh} from './zh'
-import {withSidebar} from "vitepress-sidebar";
+import { defineConfig } from 'vitepress'
+import { shared } from './shared'
+import { zh } from './zh'
+import { withSidebar } from "vitepress-sidebar";
 
 
 const vitePressConfig = {
     ...shared,
     locales: {
-        root: {label: '简体中文', ...zh},
+        root: { label: '简体中文', ...zh },
     }
 }
 const rootLocale = 'zh'
@@ -27,7 +27,7 @@ const vitePressSidebarConfigs = () => {
         directories.forEach(directory => {
             r.push({
                 ...commonSidebarConfig,
-                ...(rootLocale === locale ? {} : {basePath: `/${locale}/`}), // If using `rewrites` option
+                ...(rootLocale === locale ? {} : { basePath: `/${locale}/` }), // If using `rewrites` option
                 documentRootPath: `/docs/${locale}`,
                 resolvePath: rootLocale === locale ? `/${directory}/` : `/${locale}/${directory}/`,
                 scanStartPath: directory,

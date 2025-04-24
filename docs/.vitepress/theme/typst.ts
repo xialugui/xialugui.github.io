@@ -4,6 +4,7 @@ import { withAccessModel } from '@myriaddreamin/typst.ts/dist/esm/options.init.m
 import { MemoryAccessModel } from '@myriaddreamin/typst.ts/dist/cjs/index.cjs';
 import { createGlobalCompiler, getGlobalCompiler, withGlobalCompiler } from '@myriaddreamin/typst.ts/dist/esm/contrib/global-compiler.mjs';
 import axios from 'axios';
+import { withBase } from 'vitepress';
 
 
 export class TypstHelper {
@@ -14,16 +15,16 @@ export class TypstHelper {
     }
     async initLibs() {
         const compiler = await $typst.getCompiler()
-        await axios.get("/libs.typ").then((response) => {
+        await axios.get(withBase("/libs.typ")).then((response) => {
             compiler.addSource("/docs/public/libs.typ", response.data)
         })
-        await axios.get("/utils.typ").then((response) => {
+        await axios.get(withBase("/utils.typ")).then((response) => {
             compiler.addSource("/docs/public/utils.typ", response.data)
         })
-        await axios.get("/fonts.typ").then((response) => {
+        await axios.get(withBase("/fonts.typ")).then((response) => {
             compiler.addSource("/docs/public/fonts.typ", response.data)
         })
-        await axios.get("/book.typ").then((response) => {
+        await axios.get(withBase("/book.typ")).then((response) => {
             compiler.addSource("/docs/public/book.typ", response.data)
         })
     }
@@ -32,9 +33,9 @@ export class TypstHelper {
         $typst.setCompilerInitOptions({
             beforeBuild: [
                 preloadRemoteFonts([
-                    'fonts/JetBrainsMono-Regular.ttf',
-                    'fonts/JetBrainsMono-Bold.ttf',
-                    'fonts/LXGWWenKaiMonoGBScreen.ttf',
+                    '/fonts/JetBrainsMono-Regular.ttf',
+                    '/fonts/JetBrainsMono-Bold.ttf',
+                    '/fonts/LXGWWenKaiMonoGBScreen.ttf',
                 ]),
             ],
             getModule: () =>

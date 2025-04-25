@@ -1,42 +1,41 @@
 import { $typst } from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
 import { FetchAccessModel, preloadRemoteFonts } from "@myriaddreamin/typst.ts";
-import { withAccessModel } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
+import { preloadFontAssets, preloadSystemFonts, withAccessModel } from '@myriaddreamin/typst.ts/dist/esm/options.init.mjs';
 import { MemoryAccessModel } from '@myriaddreamin/typst.ts/dist/cjs/index.cjs';
 import { createGlobalCompiler, getGlobalCompiler, withGlobalCompiler } from '@myriaddreamin/typst.ts/dist/esm/contrib/global-compiler.mjs';
 import axios from 'axios';
-import { withBase } from 'vitepress';
-
+import { init, loadEnv, withBase } from 'vitepress';
+// const env = loadEnv('development', process.cwd())
 
 export class TypstHelper {
-
     init() {
         this.initCompiler()
         this.initLibs()
     }
     async initLibs() {
         const compiler = await $typst.getCompiler()
-        await axios.get(withBase("/libs.typ")).then((response) => {
-            compiler.addSource("/docs/public/libs.typ", response.data)
-        })
-        await axios.get(withBase("/utils.typ")).then((response) => {
-            compiler.addSource("/docs/public/utils.typ", response.data)
-        })
-        await axios.get(withBase("/fonts.typ")).then((response) => {
-            compiler.addSource("/docs/public/fonts.typ", response.data)
-        })
-        await axios.get(withBase("/book.typ")).then((response) => {
-            compiler.addSource("/docs/public/book.typ", response.data)
-        })
+        const libs = await axios.get("/libs.typ")
+        compiler.addSource("/docs/public/libs.typ", libs.data)
+        const utils = await axios.get("/utils.typ")
+        compiler.addSource("/docs/public/utils.typ", utils.data)
+        const fonts = await axios.get("/fonts.typ")
+        compiler.addSource("/docs/public/fonts.typ", fonts.data)
+        const book = await axios.get("/book.typ")
+        compiler.addSource("/docs/public/book.typ", book.data)
     }
 
     initCompiler() {
         $typst.setCompilerInitOptions({
             beforeBuild: [
+                preloadFontAssets({
+                    assets: false
+                }),
                 preloadRemoteFonts([
-                    '/fonts/JetBrainsMono-Regular.ttf',
-                    '/fonts/JetBrainsMono-Bold.ttf',
-                    '/fonts/LXGWWenKaiMonoGBScreen.ttf',
+                    'https://public.xlg.icu/fonts/JetBrainsMono-Regular.ttf',
+                    'https://public.xlg.icu/fonts/JetBrainsMono-Bold.ttf',
+                    'https://public.xlg.icu/fonts/LXGWWenKaiMonoGBScreen.ttf',
                 ]),
+
             ],
             getModule: () =>
                 'https://fastly.jsdelivr.net/npm/@myriaddreamin/typst-ts-web-compiler/pkg/typst_ts_web_compiler_bg.wasm',

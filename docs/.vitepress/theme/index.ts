@@ -7,6 +7,7 @@ import { toRefs } from "vue";
 // @ts-ignore
 import Typst from './components/Typst.vue'
 import { typstHelper } from "./typst"
+
 export default {
     ...DefaultTheme,
     enhanceApp({ app, router, siteData }) {

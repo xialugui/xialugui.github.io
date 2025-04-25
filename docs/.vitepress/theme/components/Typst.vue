@@ -15,9 +15,20 @@ const props = defineProps({
 onMounted(async () => {
   axios.get(props.path).then(async (res) => {
     const mainContent = res.data;
-    typst.compiled = await $typst.svg({ mainContent });
+    await init(mainContent, 1)
   })
 });
+async function init(mainContent: string, i: number) {
+  if (i > 5) {
+    return
+  }
+  try {
+    typst.compiled = await $typst.svg({ mainContent });
+  }
+  catch (e) {
+    setInterval(async () => await init(mainContent, i + 1), 500)
+  }
+}
 </script>
 <template>
   <div v-html="typst.compiled" />

@@ -29,7 +29,7 @@ async function init(mainContent: string, i: number) {
     typst.compiled = t?.buffer
   }
   catch (e) {
-    setInterval(async () => await init(mainContent, i + 1), 500)
+    setTimeout(async () => await init(mainContent, i + 1), 500)
   }
 }
 </script>

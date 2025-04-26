@@ -3,10 +3,12 @@ import axios from "axios";
 import { reactive, onMounted, watch, ref } from 'vue';
 import { $typst } from '@myriaddreamin/typst.ts/dist/esm/contrib/snippet.mjs';
 import { createTypstCompiler } from '@myriaddreamin/typst.ts/dist/esm/compiler.mjs';
-
+import VuePdfApp from "vue3-pdf-app";
+// import this to use default icons for buttons
+import "vue3-pdf-app/dist/icons/main.css";
 
 const typst = reactive({
-  compiled: '',
+  compiled: null,
 });
 const props = defineProps({
   path: String,
@@ -23,7 +25,8 @@ async function init(mainContent: string, i: number) {
     return
   }
   try {
-    typst.compiled = await $typst.svg({ mainContent });
+    const t = await $typst.pdf({ mainContent });
+    typst.compiled = t?.buffer
   }
   catch (e) {
     setInterval(async () => await init(mainContent, i + 1), 500)
@@ -31,6 +34,8 @@ async function init(mainContent: string, i: number) {
 }
 </script>
 <template>
-  <div v-html="typst.compiled" />
+  <!-- <div v-html="typst.compiled" /> -->
+  <VuePdfApp style="height: 100vh;" :pdf="typst.compiled" />
+
 </template>
 <style lang="css"></style>

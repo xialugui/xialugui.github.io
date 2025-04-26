@@ -17,6 +17,7 @@
     "@myriaddreamin/typst.ts": "0.5.5-rc7",
     "@myriaddreamin/typst.vue3": "0.5.5-rc7",
     "axios": "^1.8.4",
-    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+    "vitepress-plugin-comment-with-giscus": "^1.1.15",
+    "vue3-pdf-app": "^1.0.3"
   }
 }

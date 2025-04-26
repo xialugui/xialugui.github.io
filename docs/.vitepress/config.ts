@@ -16,7 +16,8 @@ const directories = ["deep-learning", "data-structures-and-algorithms"];
 const commonSidebarConfig = {
     collapsed: false,
     capitalizeFirst: true,
-    useTitleFromFileHeading: true,
+    // useTitleFromFileHeading: true,
+    useTitleFromFrontmatter: true,
     useFolderTitleFromIndexFile: true,
     sortMenusByFrontmatterOrder: true,
 }

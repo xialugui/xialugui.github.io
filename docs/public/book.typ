@@ -36,22 +36,24 @@
 
 
   set figure(supplement: "图")
-  set page(numbering: "1", margin: (top: 1em, left: 1em, bottom: 1em, right: 1em))
+  set page(numbering: "1", 
+  // margin: (top: 1em, left: 1em, bottom: 1em, right: 1em)
+  )
 
   set par(justify: true, first-line-indent: 2em)
 
 
-  align(center + horizon)[
-    #text(size: font-sizes.小初)[#title]
-    #v(4%)
-    #link("mailto:" + author.email)[#author.name]#super()[1]
-    #v(2%)
-    #super()[1]#author.address；
-    #v(4%)
-    #datetime.today().display("[year]年[month]月[day]日")
-  ]
+  // align(center + horizon)[
+  //   #text(size: font-sizes.小初)[#title]
+  //   #v(4%)
+  //   #link("mailto:" + author.email)[#author.name]#super()[1]
+  //   #v(2%)
+  //   #super()[1]#author.address；
+  //   #v(4%)
+  //   #datetime.today().display("[year]年[month]月[day]日")
+  // ]
 
-  pagebreak()
+  // pagebreak()
 
   show outline.entry.where(level: 1): it => {
     v(1em, weak: true)

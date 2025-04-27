@@ -6,6 +6,7 @@ function getdir() {
         else
             if [[ $dir_or_file =~ \.typ$ ]]; then
                 typlite $dir_or_file
+                git add ${dir_or_file%.*}.md
             fi
         fi
     done

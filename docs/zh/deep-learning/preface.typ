@@ -5,3 +5,5 @@
 
 #image("image.png")
 = Test
+
+= Test All

@@ -1,12 +1,9 @@
 import DefaultTheme from 'vitepress/theme-without-fonts'
-import './my-fonits.css'
+import './my-fonts.css'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 // @ts-ignore
 import { toRefs } from "vue";
-// @ts-ignore
-import Typst from './components/Typst.vue'
-import { typstHelper } from "./typst"
 
 export default {
     ...DefaultTheme,
@@ -20,9 +17,6 @@ export default {
             }
         }
         // DefaultTheme.enhanceApp(ctx);
-        typstHelper.init()
-
-        app.component('Typst', Typst)
     },
     setup() {
         // 获取前言和路由

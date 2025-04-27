@@ -1,5 +1,6 @@
----
-title: 前言
----
 
-<Typst path="preface.typ"/>
+
+
+# 深度学习
+
+![](image.png)

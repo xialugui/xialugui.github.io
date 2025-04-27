@@ -22,6 +22,8 @@ export class TypstHelper {
         compiler.addSource("/docs/public/fonts.typ", fonts.data)
         const book = await axios.get("/book.typ")
         compiler.addSource("/docs/public/book.typ", book.data)
+        const chapter = await axios.get("/chapter.typ")
+        compiler.addSource("/docs/public/chapter.typ", book.data)
     }
 
     initCompiler() {

@@ -1,13 +1,15 @@
 {
   "type": "module",
   "devDependencies": {
+    "husky": "^9.1.7",
     "vitepress": "^1.5.0",
     "vitepress-sidebar": "^1.30.2"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.1.2",

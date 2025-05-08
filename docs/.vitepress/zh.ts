@@ -1,5 +1,5 @@
-import {defineConfig, type DefaultTheme} from 'vitepress'
-import {generateSidebar} from "vitepress-sidebar";
+import { defineConfig, type DefaultTheme } from 'vitepress'
+import { generateSidebar } from "vitepress-sidebar";
 
 export const zh = defineConfig({
     lang: 'zh-Hans',
@@ -64,6 +64,11 @@ function nav(): DefaultTheme.NavItem[] {
         {
             items: [
                 {
+                    text: 'Linux',
+                    link: '/linux/preface',
+                    activeMatch: '/linux/'
+                },
+                {
                     text: '参与贡献',
                     link: 'https://github.com/xialugui/xialugui.github.io/blob/main/.github/contributing.md'
                 }
@@ -82,8 +87,8 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
             text: '预备知识',
             collapsed: false,
             items: [
-                {text: '数据操作', link: 'data-operation'},
-                {text: '数据预处理', link: 'data-preprocess'},
+                { text: '数据操作', link: 'data-operation' },
+                { text: '数据预处理', link: 'data-preprocess' },
             ]
         }
     ]

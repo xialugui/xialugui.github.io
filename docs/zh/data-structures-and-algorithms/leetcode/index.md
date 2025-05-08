@@ -1,5 +1,1 @@
----
-order: 2
----
-
-# leetcode题解
+# leetcode 题解

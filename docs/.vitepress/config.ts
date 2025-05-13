@@ -12,7 +12,7 @@ const vitePressConfig = {
 }
 const rootLocale = 'zh'
 const supportedLocales = [rootLocale];
-const directories = ["deep-learning", "data-structures-and-algorithms", "linux"];
+const directories = ["deep-learning", "data-structures-and-algorithms", "linux", "python"];
 const commonSidebarConfig = {
     collapsed: false,
     capitalizeFirst: true,

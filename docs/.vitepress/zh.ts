@@ -43,6 +43,11 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
     return [
         {
+            text: 'Python',
+            link: '/python/preface',
+            activeMatch: '/python/',
+        },
+        {
             text: '深度学习',
             link: '/deep-learning/preface',
             activeMatch: '/deep-learning/',

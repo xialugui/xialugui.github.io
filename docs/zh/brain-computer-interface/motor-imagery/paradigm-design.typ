@@ -3,7 +3,7 @@
 order: 1
 
 ---
-#import "../../../typst/chapter.typ":*
+/* #import "../../../typst/chapter.typ":*
 #import "../../../typst/herohot/lib.typ":*
 #show: config.with()
 
@@ -39,5 +39,5 @@ order: 1
 + 休息：休息字样，持续7s（可调节），运动想象成功进行视觉反馈；
 
 - 实验前，睁眼和闭眼各1分钟；
-- 5 sessions，40 trials/session，left：right（20:20），一共$5 times 40 = #(5*40)$trials；
+- 5 sessions，40 trials/session，left：right（20:20），一共$5 times 40 = #(5*40)$trials； */
 

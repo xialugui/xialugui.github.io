@@ -1,3 +1,11 @@
+handle_error() {
+    local error_code=$?
+    echo "错误：命令在第 $1 行失败，错误码: $error_code" >&2
+    # 可以在这里添加恢复或回滚逻辑
+    # exit $error_code  # 可选：终止脚本或继续执行
+}
+trap 'handle_error $LINENO' ERR
+
 function getdir() {
     for element in $(ls $1); do
         dir_or_file=$1"/"$element

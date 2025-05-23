@@ -48,6 +48,11 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: '/python/',
         },
         {
+            text: '脑机接口',
+            link: '/brain-computer-interface/preface',
+            activeMatch: '/brain-computer-interface/',
+        },
+        {
             text: '深度学习',
             link: '/deep-learning/preface',
             activeMatch: '/deep-learning/',

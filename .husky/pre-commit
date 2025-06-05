@@ -5,10 +5,13 @@ getdir() {
             getdir $dir_or_file
         else
             if [[ $dir_or_file =~ \.typ$ ]]; then
-                typlite $dir_or_file || echo "转换 $dir_or_file 失败"
-
-                echo "转换 $dir_or_file 成功"
-                git add ${dir_or_file%.*}.md
+                # typlite $dir_or_file || 
+                if typlite $dir_or_file ; then
+                    echo "转换 $dir_or_file 成功"
+                    git add ${dir_or_file%.*}.md
+                else
+                    echo "转换 $dir_or_file 失败"
+                fi
             fi
         fi
     done

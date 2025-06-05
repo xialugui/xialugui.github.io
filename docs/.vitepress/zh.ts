@@ -58,6 +58,11 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: '/deep-learning/',
         },
         {
+            text: '机器学习',
+            link: '/machine-learning/',
+            activeMatch: '/deep-learning/',
+        },
+        {
             text: '数据结构与算法',
             link: '/data-structures-and-algorithms/preface',
             activeMatch: '/data-structures-and-algorithms/',

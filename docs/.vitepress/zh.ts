@@ -14,7 +14,7 @@ export const zh = defineConfig({
 
         footer: {
             message: '基于 MIT 许可发布',
-            copyright: `版权所有 © 2017-${new Date().getFullYear()} 夏露桂`
+            copyright: `版权所有 © 2017-${new Date().getFullYear()} 夏露桂 <a href="https://beian.miit.gov.cn/" target="_blank">赣ICP备2023009367号-5</a>`
         },
 
         docFooter: {
